@@ -24,3 +24,5 @@ bool VoodooGPIOIceLakeLP::start(IOService *provider) {
 
     return VoodooGPIO::start(provider);
 }
+
+#include "../TigerLake-LP/VoodooGPIOTigerLakeLP.cpp"
