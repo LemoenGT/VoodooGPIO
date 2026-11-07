@@ -8,7 +8,7 @@
 
 #include "VoodooGPIOTigerLakeLP.hpp"
 
-OSDefineMetaClassAndStructors(VoodooGPIOTigerLakeLP, VoodooGPIOIntel);
+OSDefineMetaClassAndStructors(VoodooGPIOTigerLakeLP, VoodooGPIO);
 
 bool VoodooGPIOTigerLakeLP::start(IOService *provider) {
     this->pins = tgllp_pins;
@@ -22,5 +22,5 @@ bool VoodooGPIOTigerLakeLP::start(IOService *provider) {
 
     IOLog("%s::Loading GPIO Data for TigerLake-LP\n", getName());
 
-    return VoodooGPIOIntel::start(provider);
+    return VoodooGPIO::start(provider);
 }
